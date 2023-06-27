@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cow Health Prediction</title>
+</head>
+<body>
+    <h1>Cow Health Prediction</h1>
+    <form action="{% url 'predict' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" accept=".xlsx, .xls">
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
